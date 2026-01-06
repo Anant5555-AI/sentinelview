@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #0f172a;
+  /* slate-900 */
+  color: #f8fafc;
+  /* slate-50 */
+}
+
+/* Custom Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.5);
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* Dark Theme for Leaflet Draw Toolbar */
+.leaflet-bar {
+  border: 1px solid #1e293b !important;
+  /* slate-800 */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5) !important;
+}
+
+.leaflet-bar a {
+  background-color: #0f172a !important;
+  /* slate-900 */
+  color: #94a3b8 !important;
+  /* slate-400 */
+  border-bottom: 1px solid #1e293b !important;
+  /* slate-800 */
+}
+
+.leaflet-bar a:hover {
+  background-color: #1e293b !important;
+  /* slate-800 */
+  color: #3b82f6 !important;
+  /* blue-500 */
+}
+
+.leaflet-bar a:last-child {
+  border-bottom: none !important;
+}
+
+/* Invert icons to look good on dark bg (if they are black images) */
+.leaflet-draw-toolbar a {
+  background-image: none;
+  /* We will use CSS filters or SVGs if possible, but standard leaflet draw uses sprite images. */
+  /* Filter to make black icons white/gray */
+  filter: invert(1) hue-rotate(180deg) opacity(0.7);
+}
+
+.leaflet-draw-toolbar a:hover {
+  filter: invert(1) hue-rotate(180deg) opacity(1);
+}
+
+/* Dark Tooltip styles */
+.leaflet-draw-tooltip {
+  background: #0f172a;
+  color: #f8fafc;
+  border: 1px solid #334155;
+}
+
+/* Popup Dark Mode */
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
+  background: #0f172a;
+  /* slate-900 */
+  color: white;
+  border: 1px solid #334155;
+  /* slate-700 */
+}
+
+.leaflet-container .leaflet-control-attribution {
+  background: rgba(15, 23, 42, 0.8) !important;
+  color: #64748b !important;
+}
+
+.leaflet-container .leaflet-control-attribution a {
+  color: #94a3b8 !important;
+}
+
+/* Tooltip Default Dark Style */
+.leaflet-tooltip {
+  background-color: #0f172a !important;
+  /* slate-900 */
+  border: 1px solid #334155 !important;
+  /* slate-700 */
+  color: #f8fafc !important;
+  /* slate-50 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5) !important;
+  font-family: inherit !important;
+}
+
+.leaflet-tooltip::before {
+  border-bottom-color: #0f172a !important;
+  border-top-color: #0f172a !important;
+}
