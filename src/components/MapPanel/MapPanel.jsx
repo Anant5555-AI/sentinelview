@@ -321,7 +321,7 @@ const MapPanel = () => {
 
                 {/* Dropdown Content */}
                 {showRouteList && (
-                    <div className="mt-2 w-64 bg-slate-900/95 border border-slate-700 rounded-lg shadow-xl backdrop-blur-md overflow-hidden max-h-64 flex flex-col">
+                    <div className="mt-2 w-48 md:w-64 bg-slate-900/95 border border-slate-700 rounded-lg shadow-xl backdrop-blur-md overflow-hidden max-h-48 md:max-h-64 flex flex-col">
                         <div className="p-2 border-b border-slate-800 flex justify-between items-center bg-slate-950/50">
                             <span className="text-xs font-bold text-slate-400">MISSION PLAN</span>
                             <div className="flex gap-2">
